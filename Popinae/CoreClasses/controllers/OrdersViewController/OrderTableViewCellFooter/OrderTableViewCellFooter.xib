@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="zPd-PP-jB6" customClass="OrderTableViewCellFooter">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztu-xM-nQf" userLabel="separator">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xJu-J6-X9o"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtP-hz-dxM">
+                    <rect key="frame" x="8" y="13" width="85" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$85,000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvY-FR-zrC">
+                    <rect key="frame" x="241" y="13" width="62" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ztu-xM-nQf" firstAttribute="top" secondItem="zPd-PP-jB6" secondAttribute="top" id="203-0k-SzX"/>
+                <constraint firstItem="OtP-hz-dxM" firstAttribute="top" secondItem="Ztu-xM-nQf" secondAttribute="bottom" constant="12" id="3OZ-Hp-YFP"/>
+                <constraint firstItem="OtP-hz-dxM" firstAttribute="leading" secondItem="zPd-PP-jB6" secondAttribute="leading" constant="8" id="H8M-mf-Jlz"/>
+                <constraint firstAttribute="trailing" secondItem="Ztu-xM-nQf" secondAttribute="trailing" id="J8C-qm-pDM"/>
+                <constraint firstItem="Ztu-xM-nQf" firstAttribute="leading" secondItem="zPd-PP-jB6" secondAttribute="leading" id="JcP-99-OwM"/>
+                <constraint firstAttribute="trailing" secondItem="EvY-FR-zrC" secondAttribute="trailing" constant="17" id="KZL-kz-Y34"/>
+                <constraint firstItem="EvY-FR-zrC" firstAttribute="top" secondItem="Ztu-xM-nQf" secondAttribute="bottom" constant="12" id="jMZ-Ot-bV0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblOrderTotal" destination="OtP-hz-dxM" id="GG5-Bl-MDS"/>
+                <outlet property="lblTotalPrice" destination="EvY-FR-zrC" id="TiL-SZ-IuN"/>
+                <outlet property="separatorView" destination="Ztu-xM-nQf" id="8gN-Nj-RyJ"/>
+            </connections>
+            <point key="canvasLocation" x="22" y="210.5"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

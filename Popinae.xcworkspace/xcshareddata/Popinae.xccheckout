@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54636933-66DC-4000-BAA7-45DD31EBC34B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Popinae</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>810C8EC53A8A92519BFC20C43431247B1D48DCA4</key>
+		<string>ssh://bitbucket.org/sohaib770/propinae.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Popinae.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>810C8EC53A8A92519BFC20C43431247B1D48DCA4</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://bitbucket.org/sohaib770/propinae.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>810C8EC53A8A92519BFC20C43431247B1D48DCA4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>810C8EC53A8A92519BFC20C43431247B1D48DCA4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Popinae</string>
+		</dict>
+	</array>
+</dict>
+</plist>

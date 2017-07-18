@@ -1,0 +1,83 @@
+//
+//  MealsFeed.h
+//  Popinae
+//
+//  Created by Sohaib Muhammad on 24/01/2015.
+//  Copyright (c) 2015 iDevNerds. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "BaseModel.h"
+#import "BaseFeed.h"
+
+<<<<<<< Updated upstream
+#import <MapKit/MapKit.h>
+
+=======
+>>>>>>> Stashed changes
+typedef void(^GetMealsCompletionHandler) (NSError *error);
+typedef void(^GetMealsListCompletionHandler) (NSError *error);
+
+@interface Meal : BaseModel
+
+@property (readonly,strong,nonatomic) NSString *mealId;
+@property (readonly,strong,nonatomic) NSString *mealDescription;
+@property (strong,nonatomic) NSString *mealPrice; // temp make not read only
+@property (strong,nonatomic) NSString *mealTitle; // temp make not read only
+@property (readonly,strong,nonatomic) NSString *mealImage;
+@property (readonly,strong,nonatomic) NSString *mealFamilyId;
+@property (readonly,strong,nonatomic) NSString *mealFamilyName;
+@property (readonly,strong,nonatomic) NSString *currencyCode;
+@property (readonly,strong,nonatomic) NSString *currencyID;
+@property (readonly,strong,nonatomic) NSString *currencySymbol;
+@property (readonly,strong,nonatomic) NSString *currencyTitle;
+@property (readonly,strong,nonatomic) NSString *quantity; // key available in cart list
+@property (readonly,strong,nonatomic) NSString *storeID;
+@property (readonly,strong,nonatomic) NSString *storeName;
+@property (readonly,strong,nonatomic) NSString *storeLat;
+@property (readonly,strong,nonatomic) NSString *storeLng;
+@property (readonly,strong,nonatomic) NSString *distance;
+
+-(void)populateData:(NSDictionary *)dataDict withValueI:(int) i;
+
+-(void)populateData:(NSDictionary *)dataDict;
+
+@end
+
+
+@interface MealFeed : BaseFeed
+
+@property (readonly,strong,nonatomic) NSString *totalCount;
+@property (readonly,strong,nonatomic) NSString *totalPages;
+@property (readonly,strong,nonatomic) NSString *previousPageURLString;
+@property (readonly,strong,nonatomic) NSString *nextPageURLString;
+@property (readonly,strong,nonatomic) NSMutableArray *mealFeed;
+
+- (Meal*)mealAtIndex:(NSInteger)index;
+- (NSInteger)mealsCount;
+
+
+- (void)getMealsWithLatitude:(float)latitude
+                   longitude:(float)logitude
+                      radius:(float)radius
+                     keyword:(NSString*)keyword
+                      pageNo:(int)pageNo
+                   recordsNo:(int)recordsNo
+           completionHandler:(GetMealsCompletionHandler)handler;
+
+- (void)getMealsWithMealId:(NSNumber*)mealId
+              mealFamilyId:(NSNumber*)mealFamilyId
+                   storeId:(NSNumber*)storeId
+                    sortBy:(NSString*)sortBy
+                 sortOrder:(NSString *)sortOrder
+                    pageNo:(NSNumber*)pageNo
+                 recordsNo:(NSNumber*)recordsNo
+                      lang:(NSString *)lang
+         completionHandler:(GetMealsListCompletionHandler)handler;
+
++(MealFeed *)sharedMealFeed;
+
+-(MKCoordinateRegion)calculateRegion;
+
+
+@end
